@@ -15,8 +15,8 @@
   --color-primary: #2d5a27;
   --color-primary-dark: #1e3d1a;
   --color-primary-light: #4a8c3f;
-  --color-accent: #8b6914;
-  --color-accent-light: #c4993d;
+  --color-accent: #7a5c10;
+  --color-accent-light: #b8892e;
   --color-bg: #faf8f5;
   --color-bg-alt: #f0ebe3;
   --color-text: #333333;
@@ -59,6 +59,12 @@ a {
 
 a:hover {
   color: var(--color-primary-light);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .container {
@@ -115,14 +121,15 @@ a:hover {
 
 .nav-menu a {
   display: block;
-  padding: 8px 14px;
-  font-size: 0.875rem;
+  padding: 10px 14px;
+  font-size: 0.9375rem;
   color: var(--color-text);
   border-radius: var(--radius);
   transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu a.active {
   background-color: var(--color-bg-alt);
   color: var(--color-primary);
 }
@@ -130,11 +137,15 @@ a:hover {
 .nav-toggle {
   display: none;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
   padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .nav-toggle span {
@@ -209,9 +220,9 @@ a:hover {
 }
 
 .hero-since {
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
   letter-spacing: 0.15em;
-  opacity: 0.6;
+  opacity: 0.85;
   margin-bottom: 32px;
 }
 
@@ -226,10 +237,22 @@ a:hover {
   transition: background-color 0.3s, border-color 0.3s;
 }
 
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .hero-btn:hover {
   background-color: rgba(255, 255, 255, 0.15);
   border-color: var(--color-white);
   color: var(--color-white);
+}
+
+.hero-btn-accent {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-white);
 }
 
 /* --- セクション共通 --- */
@@ -276,7 +299,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   color: var(--color-primary-dark);
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   border-radius: var(--radius);
   min-height: 200px;
@@ -312,7 +335,7 @@ a:hover {
 
 .stat-label {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.9375rem;
   color: var(--color-text-light);
   margin-bottom: 4px;
 }
@@ -361,7 +384,7 @@ a:hover {
 
 .activity-date {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--color-accent);
   font-weight: 600;
   margin-bottom: 8px;
@@ -375,7 +398,7 @@ a:hover {
 }
 
 .activity-body p {
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
   color: var(--color-text-light);
   line-height: 1.7;
 }
@@ -511,7 +534,7 @@ a:hover {
 }
 
 .mountain-body h3 small {
-  font-size: 0.85rem;
+  font-size: 0.9375rem;
   font-weight: 400;
   color: var(--color-text-light);
   margin-left: 8px;
@@ -527,7 +550,7 @@ a:hover {
 .mountain-info {
   display: flex;
   gap: 24px;
-  font-size: 0.85rem;
+  font-size: 0.9375rem;
   color: var(--color-accent);
   font-weight: 600;
 }
@@ -566,7 +589,7 @@ a:hover {
 }
 
 .join-item p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--color-text-light);
   line-height: 1.7;
 }
@@ -595,8 +618,8 @@ a:hover {
 }
 
 .form-note {
-  font-size: 0.8rem;
-  color: #999;
+  font-size: 1rem;
+  color: #767676;
 }
 
 /* --- フッター --- */
@@ -622,8 +645,8 @@ a:hover {
 }
 
 .footer-logo p {
-  font-size: 0.85rem;
-  opacity: 0.7;
+  font-size: 0.9375rem;
+  opacity: 0.85;
 }
 
 .footer-links {
@@ -633,8 +656,8 @@ a:hover {
 }
 
 .footer-links a {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.85);
   transition: color 0.3s;
 }
 
@@ -644,7 +667,7 @@ a:hover {
 
 .footer-ssac {
   font-family: "Arial Black", "Helvetica Neue", sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.9375rem;
   letter-spacing: 0.1em;
   opacity: 0.7;
   margin-left: 8px;
@@ -660,9 +683,10 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 6px 12px;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10px 14px;
+  min-height: 44px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius);
   transition: background-color 0.3s, color 0.3s;
@@ -677,8 +701,8 @@ a:hover {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: 20px;
   text-align: center;
-  font-size: 0.8rem;
-  opacity: 0.6;
+  font-size: 0.9375rem;
+  opacity: 0.85;
 }
 
 /* --- スクロールアニメーション --- */
@@ -730,7 +754,7 @@ a:hover {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .nav-menu {
     display: none;
     position: absolute;
@@ -749,7 +773,8 @@ a:hover {
   }
 
   .nav-menu a {
-    padding: 12px 24px;
+    padding: 14px 24px;
+    min-height: 44px;
     border-radius: 0;
   }
 
