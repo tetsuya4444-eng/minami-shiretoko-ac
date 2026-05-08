@@ -559,69 +559,6 @@ button:focus-visible {
   padding: 16px;
 }
 
-/* --- 山々ギャラリー --- */
-.mountain-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.mountain-card {
-  background: var(--color-white);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.mountain-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
-}
-.mountain-card img {
-  width: 100%;
-  height: auto; /* .photo-frame img の height:100% を上書き */
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.7s ease;
-}
-.mountain-card:hover img { transform: scale(1.04); }
-.mountain-card.mountain-card-featured {
-  grid-column: span 3;
-}
-.mountain-card.mountain-card-featured img {
-  aspect-ratio: 21 / 9;
-}
-.mountain-caption {
-  padding: 16px 20px 20px;
-}
-.mountain-caption h3 {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  color: var(--color-primary-dark);
-  margin-bottom: 6px;
-}
-.mountain-caption h3 small {
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: var(--color-text-light);
-  margin-left: 6px;
-}
-.mountain-caption p {
-  font-size: 0.9rem;
-  color: var(--color-text-light);
-  line-height: 1.7;
-}
-
-/* mountain-card は photo-frame クラスも兼ねるため、クレジットは画像エリアにかかるよう調整 */
-.mountain-card[data-credit]::after {
-  bottom: auto;
-  top: 8px;
-  right: 8px;
-}
-
 /* --- 入会案内 --- */
 .join-block {
   margin-top: 48px;
@@ -845,12 +782,6 @@ button:focus-visible {
     position: static;
     order: -1;
   }
-  .mountain-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .mountain-card.mountain-card-featured {
-    grid-column: span 2;
-  }
   .footer-content {
     flex-direction: column;
     gap: 24px;
@@ -887,9 +818,6 @@ button:focus-visible {
   .section-title { font-size: 1.5rem; }
 
   .about-stats { grid-template-columns: 1fr; }
-  .mountain-gallery { grid-template-columns: 1fr; }
-  .mountain-card.mountain-card-featured { grid-column: span 1; }
-  .mountain-card.mountain-card-featured img { aspect-ratio: 16 / 10; }
   .origin-story,
   .join-block { padding: 28px 22px; }
 }

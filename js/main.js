@@ -1,11 +1,9 @@
 // 南知床山岳会 - メインスクリプト
 // 1) ヒーロー写真スライドショー（Ken Burns 風）
-// 2) 山々ギャラリーの自動生成
-// 3) ナビゲーション・スクロール演出（既存機能）
+// 2) ナビゲーション・スクロール演出
 
 document.addEventListener("DOMContentLoaded", () => {
   initHeroSlideshow();
-  initMountainGallery();
   initNavigation();
   initScrollEffects();
 });
@@ -43,44 +41,6 @@ function initHeroSlideshow() {
     current = (current + 1) % total;
     slideEls[current].classList.add("is-active");
   }, 5500);
-}
-
-/* ========== 山々ギャラリー ========== */
-function initMountainGallery() {
-  const container = document.getElementById("mountainGallery");
-  if (!container || !window.SSAC_PHOTOS) return;
-
-  const items = window.SSAC_PHOTOS.gallery;
-  if (!items || !items.length) return;
-
-  items.forEach((item) => {
-    const fig = document.createElement("figure");
-    fig.className = "mountain-card photo-frame" + (item.featured ? " mountain-card-featured" : "");
-    fig.setAttribute("data-credit", "Photo by K.Yama");
-
-    const img = document.createElement("img");
-    img.src = `images/photos/${item.slug}.jpg`;
-    img.alt = item.name;
-    img.loading = "lazy";
-    fig.appendChild(img);
-
-    const cap = document.createElement("figcaption");
-    cap.className = "mountain-caption";
-
-    const head = document.createElement("h3");
-    head.innerHTML = item.elevation
-      ? `${item.name} <small>${item.elevation}</small>`
-      : item.name;
-    cap.appendChild(head);
-
-    if (item.caption) {
-      const p = document.createElement("p");
-      p.textContent = item.caption;
-      cap.appendChild(p);
-    }
-    fig.appendChild(cap);
-    container.appendChild(fig);
-  });
 }
 
 /* ========== ナビゲーション ========== */
