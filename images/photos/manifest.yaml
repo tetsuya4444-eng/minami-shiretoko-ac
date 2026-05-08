@@ -1,0 +1,140 @@
+# K.Yama さん提供写真のメタデータ（24枚）
+# このファイルは images/photos/ 配下の写真を管理する。
+# 整備・イベント写真など他の撮影者の写真は images/activities/ 配下に分けて管理する想定。
+#
+# slug: ファイル名（拡張子なし）
+# name_ja: サイト表示用の山名
+# location: 撮影地点（あれば）
+# hero_candidate: ヒーロースライドショー候補（true=採用候補）
+# notes: 補足
+# このファイル配下の全画像のクレジット: Photo by K.Yama
+
+photographer: K.Yama
+credit_text: Photo by K.Yama
+folder: images/photos/
+
+photos:
+  - slug: musa-dake
+    name_ja: 武佐岳
+    elevation_m: 1005
+    hero_candidate: true
+    notes: 会の整備対象。重要
+
+  - slug: shibetsu-dake
+    name_ja: 標津岳
+    elevation_m: 1061
+    hero_candidate: true
+    notes: 会の整備対象・設立動機の山。最重要
+
+  - slug: unabetsu-dake
+    name_ja: 海別岳
+    elevation_m: 1419
+    hero_candidate: true
+
+  - slug: rausu-dake-1
+    name_ja: 羅臼岳
+    elevation_m: 1661
+    hero_candidate: true
+    notes: 知床の主峰
+
+  - slug: rausu-dake-2
+    name_ja: 羅臼岳
+    elevation_m: 1661
+    hero_candidate: false
+    notes: 別アングル
+
+  - slug: shari-dake-ikushina
+    name_ja: 斜里岳
+    elevation_m: 1547
+    location: 以久科地区から
+    hero_candidate: true
+
+  - slug: shari-dake-mashu1ten
+    name_ja: 斜里岳
+    elevation_m: 1547
+    location: 摩周第1展望台から
+    hero_candidate: false
+
+  - slug: mashu-dake
+    name_ja: 摩周岳
+    elevation_m: 857
+    hero_candidate: true
+
+  - slug: mashu-from-risuke
+    name_ja: 摩周岳と摩周湖
+    location: リスケ山から
+    hero_candidate: true
+    notes: 摩周湖を含む眺望
+
+  - slug: nishibetsu-mashu
+    name_ja: 西別岳・摩周岳
+    hero_candidate: true
+
+  - slug: oakan-dake
+    name_ja: 雄阿寒岳
+    elevation_m: 1370
+    hero_candidate: true
+
+  - slug: meakan-akanfuji
+    name_ja: 雌阿寒岳・阿寒富士
+    hero_candidate: true
+
+  - slug: meakan-oakan-mashu1ten
+    name_ja: 雌阿寒岳・雄阿寒岳
+    location: 摩周第一展望台から
+    hero_candidate: false
+
+  - slug: mokoto-iou
+    name_ja: 藻琴山・硫黄山
+    hero_candidate: true
+
+  - slug: moan-yama
+    name_ja: モアン山
+    hero_candidate: false
+
+  - slug: nishitake-yama
+    name_ja: 西竹山
+    hero_candidate: false
+    notes: 2026年3月 冬山企画山行の山
+
+  - slug: fuppushi-dake
+    name_ja: フップシ岳
+    hero_candidate: false
+
+  - slug: samakkenupuri
+    name_ja: サマッケヌプリ
+    hero_candidate: false
+
+  - slug: sawanchisap-boshiyama
+    name_ja: サワンチサップ（帽子山）
+    hero_candidate: false
+    notes: 別名・帽子山
+
+  - slug: makuwanchisap-kabutoyama
+    name_ja: マクワンチサップ（兜山）
+    hero_candidate: false
+    notes: 別名・兜山
+
+  - slug: rubesu-dake
+    name_ja: 瑠辺斯岳
+    hero_candidate: false
+    reading_unconfirmed: true
+    notes: 読み要確認（"るべすだけ" 仮）
+
+  - slug: birao-yama
+    name_ja: 美羅尾山
+    hero_candidate: false
+    reading_unconfirmed: true
+    notes: 読み要確認（"びらおやま" 仮）
+
+  - slug: eirei-zan
+    name_ja: 英嶺山
+    hero_candidate: false
+    reading_unconfirmed: true
+    notes: 読み要確認（"えいれいざん" 仮）
+
+  - slug: hekirei-zan
+    name_ja: 辺計礼山
+    hero_candidate: false
+    reading_unconfirmed: true
+    notes: 読み要確認（"へきれいざん" 仮）

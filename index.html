@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="南知床山岳会 - 北海道中標津町を拠点に、武佐岳・標津岳など南知床の山々で登山・トレッキング・登山道整備活動を行う山岳会です。">
-  <title>南知床山岳会 | 北海道中標津町の山岳会</title>
+  <meta name="description" content="南知床山岳会（SSAC）は、北海道中標津町を拠点に、武佐岳・標津岳の登山道整備と、南知床の山々を仲間と歩く活動を行っています。年代を問わず幅広い層が参加できる、ゆるやかなライフスタイルとしての山岳会です。">
+  <title>南知床山岳会（SSAC） | 北海道中標津町・南知床の山を歩く</title>
   <link rel="stylesheet" href="css/style.css">
   <noscript>
-    <style>.section { opacity: 1; transform: none; }</style>
+    <style>
+      .section { opacity: 1; transform: none; }
+      .hero-slide:first-child { opacity: 1 !important; }
+    </style>
   </noscript>
 </head>
 <body>
@@ -20,29 +23,33 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#about">会の紹介</a></li>
-        <li><a href="#activities">活動報告</a></li>
+        <li><a href="#about">会について</a></li>
+        <li><a href="#activities">活動</a></li>
         <li><a href="#trail">登山道整備</a></li>
-        <li><a href="#mountains">山の情報</a></li>
+        <li><a href="#mountains">山々</a></li>
         <li><a href="#join">入会案内</a></li>
         <li><a href="#contact">お問い合わせ</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ヒーローセクション -->
+  <!-- ヒーローセクション（写真スライドショー） -->
   <header class="hero" id="top">
+    <div class="hero-slides" id="heroSlides">
+      <!-- スライドはJSで生成 -->
+    </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-logo-text">SSAC</p>
       <h1>南知床山岳会</h1>
-      <p class="hero-subtitle">北海道中標津町を拠点に<br>南知床の山々を歩く</p>
+      <p class="hero-subtitle">北海道中標津町を拠点に<br>南知床の山々を、暮らしのなかで歩く</p>
       <p class="hero-since">since 2023</p>
       <div class="hero-btns">
         <a href="#about" class="hero-btn">会について知る</a>
         <a href="#join" class="hero-btn hero-btn-accent">入会のご案内</a>
       </div>
     </div>
+    <div class="hero-credit" aria-label="写真クレジット">Photo by K.Yama</div>
   </header>
 
   <main>
@@ -50,22 +57,30 @@
   <!-- 会の紹介 -->
   <section class="section" id="about">
     <div class="container">
-      <h2 class="section-title">会の紹介</h2>
+      <h2 class="section-title">会について</h2>
+      <p class="section-desc">
+        南知床の穏やかな山々を、ゆるやかに、長く楽しむ。<br>
+        山と親しむ暮らしを共有する仲間の集まりです。
+      </p>
+
       <div class="about-grid">
         <div class="about-text">
           <p>
             南知床山岳会（SSAC: South Shiretoko Alpine Club）は、
-            2023年に設立された、北海道標津郡中標津町を拠点に活動する山岳会です。
-            武佐岳や標津岳をはじめとする南知床エリアの山々を中心に、
-            登山・トレッキング活動を行っています。
+            2023年に設立された、北海道標津郡中標津町を拠点とする山岳会です。
+            <strong>YAMAP を通じて知り合った仲間</strong>が中心となって始まりました。
           </p>
           <p>
-            当会は登山や各種山岳活動を愛する任意団体で、
-            山岳活動に興味を持つ人たちが安全で楽しい山岳活動を行うため、
-            技術の向上やマナーの涵養に努め、併せて会員相互の親睦を図ることを
-            目的としています。登山道の整備活動にも力を入れ、
-            地域の自然環境の保全と登山文化の継承に取り組んでいます。
+            私たちは「ザ・山岳会」のような厳格な組織を目指していません。
+            南知床の山々は決して険しく高い山ばかりではなく、<strong>日常の延長として親しめる山</strong>が多いからです。
+            登山も、トレランも、日々の運動も。
+            山と暮らしを重ねるライフスタイルを、仲間と一緒に楽しんでいます。
           </p>
+          <p>
+            メジャーな山ではないからこそ、一人で行くのは不安だという方も多いはずです。
+            <strong>みんなで集まって、わいわい山に行く</strong>。それが私たちのスタイルです。
+          </p>
+
           <div class="about-stats">
             <div class="stat">
               <span class="stat-label">設立</span>
@@ -76,60 +91,74 @@
               <span class="stat-value">中標津町</span>
             </div>
             <div class="stat">
-              <span class="stat-label">主な活動エリア</span>
-              <span class="stat-value">南知床の山々</span>
+              <span class="stat-label">会員層</span>
+              <span class="stat-value">幅広い年代</span>
             </div>
           </div>
         </div>
+
         <div class="about-image">
-          <div class="placeholder-image">
-            <span>活動写真</span>
-          </div>
+          <figure class="photo-frame" data-credit="Photo by K.Yama">
+            <img src="images/photos/mashu-from-risuke.jpg" alt="リスケ山から望む摩周岳と摩周湖" loading="lazy">
+            <figcaption class="photo-caption-bottom">リスケ山から望む摩周岳と摩周湖</figcaption>
+          </figure>
         </div>
+      </div>
+
+      <!-- 設立のきっかけ -->
+      <div class="origin-story">
+        <h3 class="origin-title">会のはじまり ── 消えかけた登山道</h3>
+        <p>
+          南知床山岳会が生まれたきっかけは、<strong>標津岳の登山道</strong>でした。
+          先人が守ってきた登山道は、地元主体の整備が数年途絶えただけで、
+          わずか2年ほどで道が見えなくなってしまいました。
+          実際に遭難事故も起きました。
+        </p>
+        <p>
+          「このままでは、山が忘れられてしまう」──
+          先人が残してくれた山を、次の世代へ手渡したい。
+          その想いが、私たちが集まった理由のひとつです。
+        </p>
+        <p>
+          現在、南知床山岳会は <strong>武佐岳と標津岳の2座</strong>の登山道整備を、
+          中標津町や地域の方々と協力しながら続けています。
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- 活動報告 -->
+  <!-- 活動（SNS誘導中心） -->
   <section class="section section-alt" id="activities">
     <div class="container">
-      <h2 class="section-title">活動報告</h2>
-      <p class="section-desc">最近の山行記録をご紹介します。</p>
-      <div class="activity-grid">
-        <article class="activity-card">
-          <div class="activity-image placeholder-image">
-            <span>山行写真</span>
-          </div>
-          <div class="activity-body">
-            <time class="activity-date">2026年3月</time>
-            <h3>西竹山 冬山企画山行</h3>
-            <p>南知床山岳会の冬の企画山行として西竹山へ。雪原をスノーシューで歩きました。</p>
-          </div>
-        </article>
-        <article class="activity-card">
-          <div class="activity-image placeholder-image">
-            <span>山行写真</span>
-          </div>
-          <div class="activity-body">
-            <time class="activity-date">2025年10月</time>
-            <h3>標津岳 紅葉登山</h3>
-            <p>紅葉に彩られた標津岳を歩きました。秋の澄んだ空気の中、素晴らしい眺望を満喫。</p>
-          </div>
-        </article>
-        <article class="activity-card">
-          <div class="activity-image placeholder-image">
-            <span>山行写真</span>
-          </div>
-          <div class="activity-body">
-            <time class="activity-date">2025年7月</time>
-            <h3>武佐岳 夏山登山</h3>
-            <p>夏の武佐岳へ。山頂からは知床連山の雄大な景色が広がりました。</p>
-          </div>
-        </article>
+      <h2 class="section-title">活動</h2>
+      <p class="section-desc">
+        年に数回の定例イベントと、メンバー同士の声かけによる山行が中心です。<br>
+        最新の活動の様子は、Facebook と Instagram で発信しています。
+      </p>
+
+      <div class="activity-types">
+        <div class="activity-type">
+          <h3>定例・イベント活動</h3>
+          <ul>
+            <li>春の登山道整備</li>
+            <li>夏・秋・冬の季節イベント登山</li>
+            <li>スノーシューでの冬山登山（年2〜3回）</li>
+            <li>武佐岳・標津岳の山開き（毎年6月）</li>
+          </ul>
+        </div>
+        <div class="activity-type">
+          <h3>横のつながりでの山行</h3>
+          <p>
+            メンバーが個人で山に行く際、「いつ、どこへ行きます。一緒にどうですか」と声をかけ合っています。
+            仲間と一緒に登る機会が、日常的にあるのが本会の特長です。
+          </p>
+        </div>
       </div>
+
       <!-- SNS誘導バナー -->
       <div class="sns-banner">
-        <p class="sns-banner-text">最新の活動情報はSNSで配信中！</p>
+        <p class="sns-banner-text">最新の活動の様子はSNSで発信中</p>
+        <p class="sns-banner-sub">山行記録・整備の様子・季節の山の表情をご覧いただけます。</p>
         <div class="sns-banner-links">
           <a href="https://www.facebook.com/p/%E5%8D%97%E7%9F%A5%E5%BA%8A%E5%B1%B1%E5%B2%B3%E4%BC%9A-61551551574406/" target="_blank" rel="noopener noreferrer" class="sns-btn sns-btn-facebook" aria-label="Facebook公式ページ">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -149,127 +178,138 @@
     <div class="container">
       <h2 class="section-title">登山道整備</h2>
       <p class="section-desc">
-        南知床山岳会では、武佐岳と標津岳の登山道整備活動を行っています。<br>
-        安全で快適な登山道を維持するため、定期的な整備作業に取り組んでいます。
+        南知床山岳会は、<strong>武佐岳</strong>と<strong>標津岳</strong>の2座の登山道整備を、
+        中標津町と協力しながら毎年実施しています。<br>
+        ボランティアでの参加もお待ちしています。
       </p>
-      <div class="trail-grid">
-        <div class="trail-card">
-          <div class="trail-icon">&#9968;</div>
-          <h3>武佐岳 登山道整備</h3>
-          <p>
-            武佐岳（1,005m）の登山道は、笹の刈り払いや倒木の処理、
-            標識の設置・補修など、多岐にわたる整備を行っています。
-            春の登山シーズン前には、冬の間に荒れた登山道の点検と整備を実施し、
-            登山者が安全に歩けるよう努めています。
-          </p>
-        </div>
-        <div class="trail-card">
-          <div class="trail-icon">&#9968;</div>
-          <h3>標津岳 登山道整備</h3>
-          <p>
-            標津岳（1,061m）の登山道についても、定期的な整備活動を実施しています。
-            急斜面の階段補修や水切りの設置、登山道脇の灌木の刈り払いなど、
-            安全性の向上と自然環境への配慮を両立した整備に取り組んでいます。
-          </p>
-        </div>
-      </div>
-      <div class="trail-gallery">
-        <div class="placeholder-image trail-photo"><span>整備活動の様子 1</span></div>
-        <div class="placeholder-image trail-photo"><span>整備活動の様子 2</span></div>
-        <div class="placeholder-image trail-photo"><span>整備活動の様子 3</span></div>
-      </div>
-    </div>
-  </section>
 
-  <!-- 山の情報 -->
-  <section class="section section-alt" id="mountains">
-    <div class="container">
-      <h2 class="section-title">山の情報</h2>
-      <p class="section-desc">中標津町周辺の主な山々をご紹介します。</p>
-      <div class="mountain-grid">
-        <div class="mountain-card">
-          <div class="mountain-image placeholder-image"><span>武佐岳</span></div>
-          <div class="mountain-body">
+      <div class="trail-grid">
+        <article class="trail-card">
+          <figure class="photo-frame photo-frame-card" data-credit="Photo by K.Yama">
+            <img src="images/photos/musa-dake.jpg" alt="武佐岳" loading="lazy">
+          </figure>
+          <div class="trail-card-body">
             <h3>武佐岳 <small>1,005m</small></h3>
             <p>
-              中標津町の北西にそびえる武佐岳は、道東を代表する山の一つです。
-              山頂からは知床連山、斜里岳、そして太平洋まで見渡す大パノラマが広がります。
-              登山口から山頂まで約3〜4時間。初心者にも比較的登りやすい山として人気があります。
+              中標津町の北西にそびえる、地域に親しまれてきた山。
+              笹刈り・倒木処理・標識補修など、登山シーズン前の春に整備を実施しています。
             </p>
-            <div class="mountain-info">
-              <span>標高: 1,005m</span>
-              <span>所要時間: 往復約6〜7時間</span>
-            </div>
+            <ul class="trail-meta">
+              <li><strong>整備</strong> 年1回・6月</li>
+              <li><strong>山開き</strong> 6月</li>
+            </ul>
           </div>
-        </div>
-        <div class="mountain-card">
-          <div class="mountain-image placeholder-image"><span>標津岳</span></div>
-          <div class="mountain-body">
+        </article>
+
+        <article class="trail-card">
+          <figure class="photo-frame photo-frame-card" data-credit="Photo by K.Yama">
+            <img src="images/photos/shibetsu-dake.jpg" alt="標津岳" loading="lazy">
+          </figure>
+          <div class="trail-card-body">
             <h3>標津岳 <small>1,061m</small></h3>
             <p>
-              標津岳は中標津町と標津町の境に位置する山で、
-              裾野に広がる広大な牧場風景と、山頂付近のハイマツ帯が特徴的です。
-              養老牛温泉からの登山道が整備されており、
-              深い森を抜けて稜線に出ると、摩周湖方面や知床の山々が望めます。
+              地元主体の整備が一時途絶え、わずか2年で道が見えなくなりかけた山。
+              本会の<strong>原点となる山</strong>であり、毎年丁寧に整備を続けています。
             </p>
-            <div class="mountain-info">
-              <span>標高: 1,061m</span>
-              <span>所要時間: 往復約5〜6時間</span>
-            </div>
+            <ul class="trail-meta">
+              <li><strong>整備</strong> 年1回・6月（秋への移動を検討中）</li>
+              <li><strong>山開き</strong> 6月</li>
+            </ul>
           </div>
-        </div>
-        <div class="mountain-card">
-          <div class="mountain-image placeholder-image"><span>海別岳</span></div>
-          <div class="mountain-body">
-            <h3>海別岳 <small>1,419m</small></h3>
-            <p>
-              知床半島の付け根に位置する海別岳は、
-              知床連山の南端を守るように立つ堂々とした山容が印象的です。
-              冬〜春の残雪期に登ることが多く、
-              山頂からはオホーツク海と知床連山の絶景を楽しめます。
-            </p>
-            <div class="mountain-info">
-              <span>標高: 1,419m</span>
-              <span>所要時間: 往復約7〜9時間</span>
-            </div>
-          </div>
-        </div>
+        </article>
+      </div>
+
+      <div class="trail-future-note">
+        <p>
+          ※ 整備活動・山開きの様子の写真は、本年の活動から順次掲載していきます。
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- 入会案内 -->
+  <!-- 山の情報（写真ギャラリー） -->
+  <section class="section section-alt" id="mountains">
+    <div class="container">
+      <h2 class="section-title">私たちが歩く山々</h2>
+      <p class="section-desc">
+        南知床山岳会の正式な活動エリアは武佐岳・標津岳の2座ですが、
+        個人やグループで道東を中心にさまざまな山へ足を運んでいます。<br>
+        メンバーが歩いた山の表情をご紹介します。
+      </p>
+
+      <div class="mountain-gallery" id="mountainGallery">
+        <!-- JSで生成 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 入会案内（安全への取り組みを内包） -->
   <section class="section" id="join">
     <div class="container">
       <h2 class="section-title">入会案内</h2>
-      <div class="join-content">
-        <div class="join-text">
-          <p>
-            南知床山岳会では、一緒に山を楽しむ仲間を募集しています。
-            経験を問わず、山が好きな方であればどなたでも歓迎します。
-          </p>
-          <div class="join-details">
-            <div class="join-item">
-              <h3>入会条件</h3>
-              <p>山を愛する方であればどなたでも入会できます。年齢・経験不問です。</p>
-            </div>
-            <div class="join-item">
-              <h3>活動頻度</h3>
-              <p>月1〜2回程度の山行を計画しています。参加は任意です。</p>
-            </div>
-            <div class="join-item">
-              <h3>年会費</h3>
-              <p>詳細はお問い合わせください。</p>
-            </div>
-            <div class="join-item">
-              <h3>入会方法</h3>
-              <p>下記のお問い合わせフォームよりご連絡ください。</p>
-            </div>
+      <p class="section-desc">
+        年代を問わず、幅広い層が活動しています。<br>
+        山が好きな方、興味のある方であればどなたでも歓迎します。
+      </p>
+
+      <div class="join-block">
+        <h3 class="join-block-title">入会にあたって</h3>
+        <div class="join-details">
+          <div class="join-item">
+            <h4>装備</h4>
+            <p>
+              本格装備は不要ですが、運動に適した服装・<strong>登山に適した靴</strong>・ザック（リュック）はご準備ください。
+              普通のランニングシューズは滑りやすく危険です。
+            </p>
+            <p class="join-item-note">
+              何を揃えればよいか分からない方も気軽にご相談ください。
+              会員に中標津のアウトドアショップ <strong>「コスモサイエンス」</strong> の店主がおり、装備のアドバイスができます。
+            </p>
+          </div>
+          <div class="join-item">
+            <h4>会費</h4>
+            <p>年会費はかかりません。</p>
+          </div>
+          <div class="join-item">
+            <h4>参加スタンス</h4>
+            <p>
+              毎週のヘビーな活動でなくて構いません。
+              ただし、会からのイベント案内には、できる範囲でお返事をお願いします。
+            </p>
+          </div>
+          <div class="join-item">
+            <h4>入会方法</h4>
+            <p>下記のお問い合わせフォームよりご連絡ください。</p>
           </div>
         </div>
-        <div class="join-image">
-          <div class="placeholder-image"><span>集合写真</span></div>
-        </div>
+      </div>
+
+      <div class="join-block join-block-safety">
+        <h3 class="join-block-title">安全への取り組み（推奨）</h3>
+        <p class="safety-intro">
+          安全な山行のため、会では次の取り組みを推奨しています（強制ではありません）。
+        </p>
+        <ol class="safety-list">
+          <li>
+            <strong>YAMAP の利用</strong>
+            <span>山行計画と記録を共有します。</span>
+          </li>
+          <li>
+            <strong>山岳保険への加入</strong>
+            <span>取りまとめは行っていませんが、加入のご相談には応じます。</span>
+          </li>
+          <li>
+            <strong>ココヘリの導入</strong>
+            <span>遭難時の捜索救助サービスです。</span>
+          </li>
+          <li>
+            <strong>LINE での計画共有・下山連絡</strong>
+            <span>気軽に状況をシェアし、メンバーで見守り合います。</span>
+          </li>
+        </ol>
+        <p class="safety-advice">
+          初めて行く山については、ベテラン会員から <strong>「こういう山だよ」</strong> という事前のアドバイスも行っています。
+        </p>
       </div>
     </div>
   </section>
@@ -282,26 +322,16 @@
         入会に関するお問い合わせやご質問は、下記フォームよりお気軽にご連絡ください。
       </p>
       <div class="contact-form-wrapper">
-        <!-- Googleフォーム埋め込みエリア -->
-        <!-- 下記のsrc属性にGoogleフォームの埋め込みURLを設定してください -->
-        <div class="form-placeholder">
-          <p>ここにGoogleフォームが表示されます</p>
-          <p class="form-note">
-            ※ Googleフォームを作成後、埋め込みコードの<br>
-            src属性のURLを下記のiframeに設定してください。
-          </p>
-          <!--
-          <iframe
-            src="YOUR_GOOGLE_FORM_URL"
-            width="100%"
-            height="800"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            title="お問い合わせフォーム"
-          >読み込んでいます…</iframe>
-          -->
-        </div>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSczSO1YrwSl053kxG8QB--1K9whWeU17j3-TqRWfX4jmD6YHw/viewform?embedded=true"
+          width="100%"
+          height="900"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="南知床山岳会 お問い合わせフォーム"
+          loading="lazy"
+          class="contact-form-iframe">読み込んでいます…</iframe>
       </div>
     </div>
   </section>
@@ -327,20 +357,22 @@
           </div>
         </div>
         <div class="footer-links">
-          <a href="#about">会の紹介</a>
-          <a href="#activities">活動報告</a>
+          <a href="#about">会について</a>
+          <a href="#activities">活動</a>
           <a href="#trail">登山道整備</a>
-          <a href="#mountains">山の情報</a>
+          <a href="#mountains">山々</a>
           <a href="#join">入会案内</a>
           <a href="#contact">お問い合わせ</a>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 南知床山岳会（SSAC）. All rights reserved.</p>
+        <p class="footer-credit">サイト内の山岳写真：Photo by K.Yama</p>
       </div>
     </div>
   </footer>
 
+  <script src="js/photos.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

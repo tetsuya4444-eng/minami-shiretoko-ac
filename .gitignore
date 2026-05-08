@@ -1,0 +1,12 @@
+# 写真原本（51MB）はリポジトリ外で管理。バックアップは別途。
+images/_originals/
+
+# macOS
+.DS_Store
+
+# editor
+.vscode/
+.idea/
+
+# logs
+*.log
