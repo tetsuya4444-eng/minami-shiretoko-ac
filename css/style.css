@@ -581,6 +581,7 @@ button:focus-visible {
 }
 .mountain-card img {
   width: 100%;
+  height: auto; /* .photo-frame img の height:100% を上書き */
   aspect-ratio: 16 / 10;
   object-fit: cover;
   display: block;
