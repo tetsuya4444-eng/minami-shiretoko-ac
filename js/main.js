@@ -170,7 +170,7 @@ function initScrollEffects() {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0 }
   );
   sections.forEach((s) => fadeObserver.observe(s));
 }
